@@ -27,6 +27,10 @@ img.addEventListener('load', () => {
   const dim = getDimmensions(400, 400, img.width, img.height);
   ctx.drawImage(img, dim.startX, dim.startY, dim.width, dim.height);
 
+  submitBtn.disabled = false;
+  clearBtn.disabled = true;
+  readBtn.disabled = true;
+
   // Some helpful tips:
   // - Fill the whole Canvas with black first to add borders on non-square images, then draw on top
   // - Clear the form when a new image is selected
